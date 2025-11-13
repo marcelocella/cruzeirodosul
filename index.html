@@ -3,32 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
- 
- 
-    <title>Cadastro de usuários | Cruzeiro do Sul</title>  
+    <title>Voluntariado e Animais | Cruzeiro do Sul</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .banner {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .banner h2 {
+            position: relative;
+            z-index: 2;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section, article {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+        aside {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 5px solid #ff9800;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        
+        header h1 { margin: 0.2em 0; }
+        section, article { padding: 15px; }
+        
+    </style>
 </head>
 <body>
     <header>
-        <h1>Cadastro de usuário de ONG</h1>
-            <nav>
-                <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="projeto.html">Projeto</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-                </ul>
-            </nav>
-            <main>
-                <section>
-                    <h2>Quem somos</h2>
-                    <p></p>
-
-                </section>
-            </main>
-
+        <h1>🐾 ONG Cruzeiro do Sul: Cuidando de quem não tem voz</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nosso Projeto</a></li>
+                <li><a href="cadastro.html">Seja Voluntário (Cadastro)</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <div class="banner">
+        <img src="woman_and_dog.jpg" alt="Duas pessoas cuidando de um cachorro em clínica veterinária.">
+        <h2>Juntos, Salvamos Vidas!</h2>
+    </div>
+
+    <main>
+        <section>
+            <h2>Quem Somos e Nossa Missão</h2>
+            <p>Somos uma organização sem fins lucrativos que atua no resgate, reabilitação e adoção responsável de animais abandonados e vítimas de maus-tratos. Nossa missão é oferecer uma segunda chance e um lar amoroso para cada animal que passa por nós.</p>
+            <p>Com o apoio de voluntários dedicados e doações, transformamos a realidade de muitos cães e gatos, proporcionando-lhes saúde, segurança e a oportunidade de encontrar uma família.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>❤️ Seja um Voluntário: Faça a Diferença!</h2>
+            <p>Os animais precisam de você! O voluntariado é o coração da ONG Cruzeiro do Sul. Recrutamos pessoas dedicadas para diversas tarefas, desde a higiene e alimentação dos bichos até a organização de eventos de adoção.</p>
+
+            <article>
+                <h3>O que faz um voluntário?</h3>
+                <p>Nossos voluntários são essenciais e podem atuar de diversas formas:</p>
+                <ul>
+                    <li>Cuidado Direto: Alimentar, limpar abrigos e dar muito carinho aos nossos residentes.</li>
+                    <li>Passeios: Levar os cães para passear e socializar, ajudando na reabilitação.</li>
+                    <li>Transporte: Ajudar a levar animais para consultas veterinárias e campanhas de vacinação.</li>
+                    <li>Divulgação: Ajudar a tirar fotos, criar posts para redes sociais e divulgar nossos eventos.</li>
+                    <li>Eventos: Apoiar na organização e execução de feiras de adoção e bazares beneficentes.</li>
+                </ul>
+            </article>
+
+            <aside>
+                <p>📢 Ficou interessado em ajudar? Se você ama animais e tem algumas horas disponíveis, junte-se à nossa equipe!</p>
+                <p><a href="cadastro.html" style="background-color: #ff9800; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">Quero ser Voluntário Agora!</a></p>
+            </aside>
+        </section>
+
+        <hr>
+
+        <section id="contato">
+            <h2>📞 Contato e Apoio</h2>
+            <p>Para mais informações ou para realizar uma doação, entre em contato conosco:</p>
+            <dl>
+                <dt>Email para Doações e Parcerias:</dt>
+                <dd>doacoes@ongdog.org</dd>
+                <dt>Telefone:</dt>
+                <dd>(91) 99999-9999</dd>
+                <dt>Endereço do Abrigo:</dt>
+                <dd>Rua dos Bichinhos Felizes, 123 - Bairro Esperança, Barcarena - PA</dd>
+            </dl>
+            <p>Siga-nos nas redes sociais para acompanhar nosso trabalho diário!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ONG Cruzeiro do Sul. Todos os direitos reservados. 🐶🐱</p>
+    </footer>
 </body>
 </html>
-
-
-

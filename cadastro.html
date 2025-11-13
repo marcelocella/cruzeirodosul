@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Voluntários | Cruzeiro do Sul</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0.2em 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #a5d6a7;
+            padding-bottom: 5px;
+        }
+
+
+        .content-flex {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .text-column, .image-column {
+            flex: 1;
+        }
+
+        .section-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+
+        @media (max-width: 600px) {
+            .content-flex {
+                flex-direction: column;
+            }
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        legend {
+            font-weight: bold;
+            color: #ff9800;
+            padding: 0 10px;
+        }
+
+        button {
+            background-color: #ff9800;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #e68a00;
+        }
+        .success-message {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #a5d6a7;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐾 Cadastro de Voluntários | ONG Cruzeiro do Sul</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Nosso Projeto</a></li>
+                <li><a href="cadastro.html">Seja Voluntário (Cadastro)</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Junte-se a Nós!</h2>
+
+            <div class="content-flex">
+
+                <div class="text-column">
+                    <p>Se você ama animais e quer fazer parte da nossa missão, preencha o formulário abaixo. Entraremos em contato para explicar os próximos passos.</p>
+                    <p>Sua dedicação é vital para o resgate e a reabilitação de cães e gatos em situação de vulnerabilidade.</p>
+                </div>
+
+                <div class="image-column">
+
+                    <img src="patas.jpg" alt="Mão e pata" class="section-image">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Formulário de Inscrição</h2>
+            <form action="cadastro.html" method="get">
+
+                <fieldset>
+                    <legend>Dados Pessoais e Contato</legend>
+
+                    <div>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div>
+                        <label for="cpf">CPF:</label>
+                        <input type="text" id="cpf" name="cpf"
+                            placeholder="999.999.999-99"
+                            pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+                            title="Formato exigido: 999.999.999-99"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="dataNasc">Data de Nascimento:</label>
+                        <input type="date" id="dataNasc" name="dataNasc" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="telefone">Telefone (com DDD):</label>
+                        <input type="tel" id="telefone" name="telefone"
+                            placeholder="(XX) XXXXX-XXXX"
+                            pattern="^\(\d{2}\)\s\d{4,5}-\d{4}$"
+                            title="Formato exigido: (XX) XXXXX-XXXX"
+                            required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+
+                    <div>
+                        <label for="endereco">Rua e Número:</label>
+                        <input type="text" id="endereco" name="endereco" required>
+                    </div>
+
+                    <div>
+                        <label for="cep">CEP:</label>
+                        <input type="text" id="cep" name="cep"
+                            placeholder="99999-999"
+                            pattern="^\d{5}-\d{3}$"
+                            title="Formato exigido: 99999-999"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade" required>
+                    </div>
+
+                    <div>
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">-- Selecione o Estado --</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="PA">Pará</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Interesse e Disponibilidade</legend>
+                    <div>
+                        <label for="frequencia">Qual sua disponibilidade semanal aproximada?</label>
+                        <select id="frequencia" name="frequencia" required>
+                            <option value="">-- Selecione --</option>
+                            <option value="1h">Até 1 hora</option>
+                            <option value="2-4h">2 a 4 horas</option>
+                            <option value="4-8h">4 a 8 horas ou mais</option>
+                        </select>
+                    </div>
+
+                    <label>Quais áreas de voluntariado te interessam? (Pelo menos uma é recomendada)</label>
+                    <div class="form-group-check">
+                        <input type="checkbox" id="cuidados" name="interesse" value="cuidados">
+                        <label for="cuidados">Cuidados Diretos (Alimentação, limpeza)</label>
+                    </div>
+                    <div class="form-group-check">
+                        <input type="checkbox" id="passeios" name="interesse" value="passeios">
+                        <label for="passeios">Passear com os cães</label>
+                    </div>
+                    <div class="form-group-check">
+                        <input type="checkbox" id="transporte" name="interesse" value="transporte">
+                        <label for="transporte">Transporte para clínica veterinária</label>
+                    </div>
+                    <div class="form-group-check">
+                        <input type="checkbox" id="eventos" name="interesse" value="eventos">
+                        <label for="eventos">Organização de eventos/divulgação</label>
+                    </div>
+
+                    <div>
+                        <label for="mensagem">Conte-nos um pouco sobre sua motivação para ser voluntário:</label>
+                        <textarea id="mensagem" name="mensagem"></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar Cadastro</button>
+            </form>
+        </section>
+
+        <div class="success-message">
+            Obrigado pelo cadastro! Recebemos seus dados e entraremos em contato em breve. Seu amor faz a diferença. &lt;3
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ONG Cruzeiro do Sul. Todos os direitos reservados. 🐶🐱</p>
+    </footer>
+</body>
+</html>
